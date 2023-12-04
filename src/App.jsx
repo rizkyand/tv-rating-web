@@ -6,9 +6,11 @@ import {TvShowDetails} from "./component/tv-show-detail/TvShowDetails";
 import {LogoHead} from "./component/logo/LogoHead";
 import logos from './asset/image/tv-solid-xl.svg'
 import {ListTVCard} from "./component/tv-card/ListTVCard";
+import {TvListContainer} from "./component/tv-card-list/TvListContainer";
 
 export const App = () => {
     const [tvShowsList, setTvShowsList] = useState();
+    const [recommendTvList, setRecommendTvList] = useState([]);
 
     const fetchTvShowList = async () => {
         const popularTV = await TvShowsAPI.getAllTVShows();
@@ -16,12 +18,25 @@ export const App = () => {
             setTvShowsList(popularTV[0]);
         }
     }
+    const fetchTvShowRecommend = async (tvId) => {
+        const respRecommend = await TvShowsAPI.getRecommendationTv(tvId);
+        if(respRecommend.length > 0){
+            setRecommendTvList(respRecommend.slice(0,10));
+        }
+    }
 
     useEffect( () => {
         fetchTvShowList();
     }, []);
 
-    console.log(tvShowsList);
+    useEffect( ()=> {
+        if(tvShowsList){
+            fetchTvShowRecommend(tvShowsList.id);
+        }
+    }, tvShowsList)
+
+    //console.log(tvShowsList);
+    console.log(recommendTvList);
 
     return <div className={s.main_container}
                 style={{
@@ -42,9 +57,7 @@ export const App = () => {
         }</div>
         <div className={s.recommended_tv_show}>
             {tvShowsList &&
-            <ListTVCard tvShow={tvShowsList} onClicked={(tvShow)=>{
-                console.log("Film Clicked, here the info:", tvShow);
-            }}/>}
+            <TvListContainer tvShowList={recommendTvList}/>}
         </div>
     </div>
 }
