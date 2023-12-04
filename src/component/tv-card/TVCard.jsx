@@ -1,8 +1,8 @@
 import s from './style.module.css'
 import {BASE_IMG_CARD} from "../../api-fetching/config";
 
-const MAX_TITLE = 25;
-export const ListTVCard = ({tvShow, onClicked}) => {
+const MAX_TITLE = 35;
+export const TVCard = ({tvShow, onClicked}) => {
     const handleClick = () => {
         onClicked(tvShow);
     }

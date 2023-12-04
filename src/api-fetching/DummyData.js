@@ -146,6 +146,29 @@ export const DUMMY_DATA = [
         "name": "Monarch: Legacy of Monsters",
         "vote_average": 8.249,
         "vote_count": 221
+    },
+    {
+        "adult": false,
+        "backdrop_path": "/aSGSxGMTP893DPMCvMl9AdnEICE.jpg",
+        "id": 1405,
+        "name": "Dexter",
+        "original_language": "en",
+        "original_name": "Dexter",
+        "overview": "Dexter Morgan, a blood spatter pattern analyst for the Miami Metro Police also leads a secret life as a serial killer, hunting down criminals who have slipped through the cracks of justice.",
+        "poster_path": "/q8dWfc4JwQuv3HayIZeO84jAXED.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+            80,
+            18,
+            9648
+        ],
+        "popularity": 226.984,
+        "first_air_date": "2006-10-01",
+        "vote_average": 8.2,
+        "vote_count": 3749,
+        "origin_country": [
+            "US"
+        ]
     }
 ]
 

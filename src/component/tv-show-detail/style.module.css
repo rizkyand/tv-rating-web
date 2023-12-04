@@ -15,6 +15,7 @@
 
 .overview:hover{
     overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 .overview{

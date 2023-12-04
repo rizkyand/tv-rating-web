@@ -2,3 +2,18 @@ body{
     color : white;
     font-family: Maximum Impact;
 }
+
+::-webkit-scrollbar{
+    background:  transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background : rgba(0,0,0, 0.4);
+    border-radius: 10px;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+    font-family: Roboto;
+    color: rgba(255, 255, 255, 0.3);
+}

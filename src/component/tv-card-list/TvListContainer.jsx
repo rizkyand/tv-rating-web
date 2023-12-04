@@ -1,4 +1,4 @@
-import {ListTVCard} from "../tv-card/ListTVCard";
+import {TVCard} from "../tv-card/TVCard";
 import s from './style.module.css'
 
 export const TvListContainer =  ({tvShowList}) => {
@@ -11,8 +11,8 @@ export const TvListContainer =  ({tvShowList}) => {
                 {tvShowList.map((tvShow)=> {
                     return (
                         <span className={s.tv_show_item} key={tvShow.id}>
-                            <ListTVCard tvShow={tvShow}
-                            onClicked={()=> console.log('Here is todo')}/>
+                            <TVCard tvShow={tvShow}
+                                    onClicked={()=> console.log('Here is todo')}/>
                         </span>
                     );
                 })}
