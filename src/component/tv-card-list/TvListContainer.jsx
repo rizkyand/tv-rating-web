@@ -1,9 +1,9 @@
 import {TVCard} from "../tv-card/TVCard";
 import s from './style.module.css'
 
-export const TvListContainer =  ({tvShowList}) => {
+export const TvListContainer =  ({tvShowList, onClickList}) => {
     return (
-        <div>
+        <>
             <div className={s.title}>
                 Here some Recommendation for You:
             </div>
@@ -12,12 +12,12 @@ export const TvListContainer =  ({tvShowList}) => {
                     return (
                         <span className={s.tv_show_item} key={tvShow.id}>
                             <TVCard tvShow={tvShow}
-                                    onClicked={()=> console.log('Here is todo')}/>
+                                    onClicked={onClickList}/>
                         </span>
                     );
                 })}
             </div>
 
-        </div>
+        </>
     );
 }

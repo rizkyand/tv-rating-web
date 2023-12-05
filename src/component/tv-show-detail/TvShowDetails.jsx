@@ -4,7 +4,7 @@ export const TvShowDetails = ({tvShow}) => {
     const rating = Math.round(tvShow.vote_average/2 * 100) / 100;
     return (
         <div>
-            <div className={s.title}>{tvShow.name}</div>
+            <div className={s.title}>{`${tvShow.name}(${tvShow.first_air_date.slice(0,4)})`}</div>
             <div className={s.rating_container}>
                 <RatingStar ratings={rating}/>
                 <span className={s.rating}>{rating}/5</span>

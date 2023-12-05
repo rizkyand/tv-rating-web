@@ -1,0 +1,18 @@
+.container{
+    right: 10vw;
+    left: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 70vh;
+    margin-top: 70px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+}
+
+.list{
+    width: 40%;
+    flex-direction: column;
+    margin-top: 75px;
+}

@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255,255, 255, 0.3);
+    border-radius: 20px;
+    position: sticky;
+    margin-top: 20px;
+}
+
+.images{
+    border-radius: 15px;
+    scale: 0.8;
+    position: relative;
+}
+
+.title{
+
+}
+
+.overview{
+    font-weight: 80;
+    font-size: 10px;
+    font-family: Roboto;
+    text-align: justify-all;
+    overflow-y: hidden;
+    height: 50px;
+    margin-top: 5px;
+}
+
+.overview:hover{
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.detail_container{
+    margin: 7px 7px 6px 0;
+    position: relative;
+}
+

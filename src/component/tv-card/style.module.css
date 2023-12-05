@@ -1,6 +1,6 @@
 .container{
     cursor: pointer;
-    position: relative;
+    position: inherit;
 }
 
 .imgs{
